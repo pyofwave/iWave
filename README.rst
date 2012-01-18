@@ -28,8 +28,7 @@ Archetecture
 I'm currently planning that iWave will hold for an engine:
 
 - XMPP system
-- XML to UIView objects translation system with "modes"
-  > XML to XML to View translation
+- XML to XML to UIView objects translation system with "modes"
 - An index of View Controllers
 
 Dependancies
