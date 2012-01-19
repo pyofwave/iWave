@@ -6,7 +6,7 @@ With Wave, you'll no longer have long re: chains which get lost between groups. 
 
 You will be communicating live on a fully editable forum structure. Your groups will be simple to manage, as are notes. You won't have to choose or change between eMail, wikis, forums, IM, video chat, social networks, or others. You'd wave. 
 
-To cap it all off, if there's anything it's missing (like a camera or voice feed), you can add it to your wave with "gadgets" and "robots"
+To cap it all off, if there's anything it's missing (like a camera or voice feed), you can add it to your wave with "gadgets" and "robots". 
 
 features:
 - Decentralized (you can choose your "Wave Provider" and "Wave client")
@@ -35,9 +35,9 @@ features:
 - See who typed what
 - Minimalistic Wave rendering
 - Alerts
-- Customizability
-- All wave features through Settings
+- Customizability through Settings
+- All wave features with simplicity
 
 Once you've waved with iWave, you'll never go back. 
 
-(Requires an xWave account like pyofwave.info, WaveInABox does not lend well to clients.
+(Requires an xWave account like pyofwave.info, WaveInABox does not lend well to clients)
