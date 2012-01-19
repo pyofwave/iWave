@@ -13,3 +13,75 @@ Modes can be extended to include the play and normal modes as well as edit (whic
 The paradigm can be extended further to the master controller (stored XML -> inboxes -> search results) with a slight adjustment to include cells, which would also help with popovers. 
 
 So, all the UI covered by the UI document would be programmed in live XML tag based translation overlayed with modes which are processed between ordinary XML and the UIView translation. 
+
+XML Design
+==========
+
+To create the XML engine, we need to know what we need from it. This section explores what components are neccessary. 
+
+View Components
+---------------
+
+Wave rendering:
+- UIView (provide structure, mostly outputed by "frames") - needs full CALayer properties
+- ENTextView (rendering & editing text)
+- UIImageView (for rendering icons & participants)
+- UIDocumentView (for rendering attachments)
+
+Wave modes:
+
+- Slider (playback)
+- Button (all modes)
+- title (all modes)
+
+Master & Popovers:
+
+- UITableViewCell (all, structure)
+- UIStepper (inspector)
+
+Events
+------
+
+These are properties on any view. 
+
+- Popover (VCIndex_name arguments...) - Dominant usage
+- Show (xPath) - For tags & replies expand/collapse icons
+- target (XML with %s) - Add Participant action
+- mode (filename) - For playback & move icons, search, edit action, contributors option
+- data (XML request) - for playback slider
+- block (names) - for live toggle option
+
+Text View:
+
+- type (XML request with %s) - for edit mode, tags, etc. 
+- sel (XML request with %s) - for edit mode
+- menu (title : [XML with %x/%y|VCIndex_name arguments...]; ...) - for edit menu
+
+Cells:
+
+- to (VCIndex_name arguments...)
+
+Processing
+----------
+
+These tags are neccessary for translating input to the output. 
+
+- tag (name)
+- out
+- attr
+- if
+- import
+
+VCIndex
+-------
+
+Native & custom view controllers for the HID display
+
+- XML
+- contacts/contact
+- contacts/select
+- photos
+- prompt
+- edit
+- colorPicker
+- web
