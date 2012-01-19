@@ -15,6 +15,8 @@ iWave is a high quality native Wave client for iPad, and eventually iPhone/iPod 
 
 While iWave is iOS specific, it will use a custom XML system (to translate XML elements into visual system objects) so it can be used as a starting point in creating other clients. 
 
+I still want iWave to work on iOS4 because I can't make a decent web client for that version (due to lack of content-editable. 
+
 UI
 --
 
@@ -22,7 +24,7 @@ iWave plans to appear simalor to Mail, but with the (limited) complexity moved t
 
 The goal is to be so consistant with the native applications the user will already know how to use iWave. 
 
-Archetecture
+Architecture
 ------------
 
 I'm currently planning that iWave will hold for an engine:
