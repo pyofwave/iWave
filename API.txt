@@ -1,0 +1,15 @@
+API Design
+++++++++++
+
+Desired Design
+==============
+
+xWave downloads waves as constantly updating XML. iWave needs to translate this to a UIView structure with an editing mode. 
+
+I plan to use XML since I'd need to use it anyways, and for both a change and ease, I'll provide tag based translation with a selection of UIView tags to translate to.
+
+Modes can be extended to include the play and normal modes as well as edit (which needs to focus on a post). They would also include modes within the structure like contrib and search modes. 
+
+The paradigm can be extended further to the master controller (stored XML -> inboxes -> search results) with a slight adjustment to include cells, which would also help with popovers. 
+
+So, all the UI covered by the UI document would be programmed in live XML tag based translation overlayed with modes which are processed between ordinary XML and the UIView translation. 

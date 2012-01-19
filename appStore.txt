@@ -1,0 +1,43 @@
+Wave gives you the benefits of all your favourite communications systems in a simple bundle. 
+iWave gives you these features in an app you won't even have to learn. 
+
+About Wave:
+With Wave, you'll no longer have long re: chains which get lost between groups. It doesn't require you to use a host you distrust or app you dislike. 
+
+You will be communicating live on a fully editable forum structure. Your groups will be simple to manage, as are notes. You won't have to choose or change between eMail, wikis, forums, IM, video chat, social networks, or others. You'd wave. 
+
+To cap it all off, if there's anything it's missing (like a camera or voice feed), you can add it to your wave with "gadgets" and "robots"
+
+features:
+- Decentralized (you can choose your "Wave Provider" and "Wave client")
+- Flexible design (use it as a wiki, forum, chat, or eMail thread. It's up to you.)
+- Easy group management (everyone will get updates)
+- Merge into "groups"
+- Rich text & Playback
+- tags based search & folders
+- forms & attachments
+- Collaborate on "gadgets"
+- Automate with "robots"
+- Simple Setup
+- Embedable & linkable
+
+About iWave:
+iWave takes advantage of native iPad features to be the best Wave client. 
+
+It's a fabulous reading device and works great for writing as well. These two factors result in the basic ingrediants for a natural Wave platform. Add on interacting smoothly with your other apps, and we've got the best. 
+
+You won't have to learn iWave because it is so reminiscent of standard apps. Throughout most it's usage after logging in, it feels just like Mail. Editing appears like Pages and playback appears like Movies. That's it, apart from our gorgeous minimalistic rendering of waves. 
+
+features:
+- Shares contacts with Address Book
+- Integrates into system with documents and URLs (web addresses)
+- Reminiscent of standard apps (Mail, Movies, Pages)
+- See who typed what
+- Minimalistic Wave rendering
+- Alerts
+- Customizability
+- All wave features through Settings
+
+Once you've waved with iWave, you'll never go back. 
+
+(Requires an xWave account like pyofwave.info, WaveInABox does not lend well to clients.
