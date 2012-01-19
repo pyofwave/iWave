@@ -77,11 +77,13 @@ VCIndex
 
 Native & custom view controllers for the HID display
 
-- XML
-- contacts/contact
-- contacts/select
+Options follow name. Options between [ and ] are optional. Ellipses (...) signal a continuation within any type of brackets. | signals an alternative argument. 
+
+- XML fileName XMLRequest [data...]
+- contacts/contact address [selectLabel {value : label; ...}]
+- contacts/select Title [search]
 - photos
-- prompt
-- edit
-- colorPicker
-- web
+- prompt VCIndex | { label : VCIndex; ...}
+- edit { label : xPath; ...} element
+- colorPicker color
+- web [search]
