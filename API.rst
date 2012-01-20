@@ -115,3 +115,12 @@ These tasks include:
 	- Defaulting to welcome screen & preparing accounts XML file.
 
 With the exception of the UI setup, we need to ensure that the engine is capable of intercepting responses and in the case of the address book, altering them. 
+
+Apart from that, native iOS should be comfortable to use, in particular:
+
+- User Defaults
+- UISplitView
+- AddressBook
+- Apllication state notifications
+- background processing (as VoIP), & Local Notifications
+- Settings
