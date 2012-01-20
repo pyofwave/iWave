@@ -40,4 +40,5 @@ I plan to use in iWave:
 
 - RSully/RSColorPicker
 - enormego/EGOTextView
+- AlanQuartermain/AQGridView
 - xmppframework (either that or custom)

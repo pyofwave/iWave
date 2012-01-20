@@ -80,6 +80,7 @@ Native & custom view controllers for the HID display
 Options follow name. Options between [ and ] are optional. Ellipses (...) signal a continuation within any type of brackets. | signals an alternative argument. 
 
 - XML fileName [XMLRequest [data...]]
+- XMLgrid fileName [XMLRequest [data...]]
 - contacts/contact address [selectLabel {value : label; ...} value]
 - contacts/select Title [search]
 - photos
@@ -90,11 +91,12 @@ Options follow name. Options between [ and ] are optional. Ellipses (...) signal
 
 These are used as follows (unmentioned cases use XML). ? = dependant on situation.
 
-- Media : prompt { Photos : photos; History : XML complete <fetch:records type="files">%s</fetch:records>; Web : web; Inputs : XML inputs;}
+- Media : prompt { Photos : photos; History : XML complete <fetch:records type="files">%s</fetch:records>; Web : web; Inputs : XMLgrid inputs;}
 - Participant : contacts/contact ? Permissions { None : none; View : view; edit : edit; Invite : invite; Manage : manage;} ?
 - Add participant : prompt contacts/select "Select User to Join wave"
 - (colorPicker used in Inspector)
 - (edit used in edit mode, add button of inboxes and edit mode, and welcome screen)
+- (postOptions uses XMLgrid -> XMLgrid -> contacts/contact)
 
 Non UI Tasks
 ============
