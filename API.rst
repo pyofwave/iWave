@@ -55,7 +55,7 @@ Text View:
 
 - type (XML request with %s) - for edit mode, tags, etc. 
 - sel (XML request with %s) - for edit mode
-- menu (title : [XML with %x/%y|VCIndex_name arguments...]; ...) - for edit menu
+- menu (title : [XML with %x/%y/%i|VCIndex_name arguments...]; ...) - for edit menu
 
 Cells:
 
@@ -66,11 +66,11 @@ Processing
 
 These tags are neccessary for translating input to the output. 
 
-- tag (name)
-- out
-- attr
-- if
-- import
+- tag (name) - Defines a translation for a tag
+- out - outputs xPath
+- attr (name) - outputs xPath to an attribute of parent
+- if (val) - Runs content only if val is true
+- import - Loads in contained file name
 
 VCIndex
 -------
@@ -79,11 +79,36 @@ Native & custom view controllers for the HID display
 
 Options follow name. Options between [ and ] are optional. Ellipses (...) signal a continuation within any type of brackets. | signals an alternative argument. 
 
-- XML fileName XMLRequest [data...]
-- contacts/contact address [selectLabel {value : label; ...}]
+- XML fileName [XMLRequest [data...]]
+- contacts/contact address [selectLabel {value : label; ...} value]
 - contacts/select Title [search]
 - photos
 - prompt VCIndex | { label : VCIndex; ...}
 - edit { label : xPath; ...} element
 - colorPicker color
 - web [search]
+
+These are used as follows (unmentioned cases use XML). ? = dependant on situation.
+
+- Media : prompt { Photos : photos; History : XML complete <fetch:records type="files">%s</fetch:records>; Web : web; Inputs : XML inputs;}
+- Participant : contacts/contact ? Permissions { None : none; View : view; edit : edit; Invite : invite; Manage : manage;} ?
+- Add participant : prompt contacts/select "Select User to Join wave"
+- (colorPicker used in Inspector)
+- (edit used in edit mode, add button of inboxes and edit mode, and welcome screen)
+
+Non UI Tasks
+============
+
+Apart from rendering UI and table views, iWave will include other tasks which needs to be documented and engined. 
+
+These tasks include:
+
+- Syncing with the Address Book (with 4 options: sync to account, favor iPad, favor account, sync to iPad)
+- Sounding alerts when updates are received (and if tagged, display alert)
+- Setting up the canvas for the XML view, including:
+
+	> Saving/loading state
+	> Preparing UISplitView
+	> Defaulting to welcome screen & preparing accounts XML file.
+
+With the exception of the UI setup, we need to ensure that the engine is capable of intercepting responses and in the case of the address book, altering them. 
