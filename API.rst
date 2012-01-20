@@ -23,6 +23,7 @@ View Components
 ---------------
 
 Wave rendering:
+
 - UIView (provide structure, mostly outputed by "frames") - needs full CALayer properties
 - ENTextView (rendering & editing text)
 - UIImageView (for rendering icons & participants)
@@ -109,8 +110,8 @@ These tasks include:
 - Sounding alerts when updates are received (and if tagged, display alert)
 - Setting up the canvas for the XML view, including:
 
-	> Saving/loading state
-	> Preparing UISplitView
-	> Defaulting to welcome screen & preparing accounts XML file.
+	- Saving/loading state
+	- Preparing UISplitView
+	- Defaulting to welcome screen & preparing accounts XML file.
 
 With the exception of the UI setup, we need to ensure that the engine is capable of intercepting responses and in the case of the address book, altering them. 
