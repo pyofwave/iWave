@@ -37,7 +37,7 @@ Wave modes:
 
 Master & Popovers:
 
-- UITableViewCell (all, structure)
+- cell (all, structure)
 - UIStepper (inspector)
 
 Events
@@ -124,3 +124,55 @@ Apart from that, native iOS should be comfortable to use, in particular:
 - Apllication state notifications
 - background processing (as VoIP), & Local Notifications
 - Settings
+
+Implementation considerations
+=============================
+
+Now that we know what we want, it's time to consider how it would be implemented. Here the discussed components are paired to their corresponding system/library calls. 
+
+Views
+-----
+
+The view tags pair directly to their named classes. 
+
+The events, however, are either gesture recognizers (views) or callbacks (controls) which uses the specifications to create an action. The psuedocode for these actions is:
+
+    If show specified
+      Toggle the display of view with animation
+    If mode specified
+      Set the mode on the processor
+      Trigger rerendering
+    If data specified
+      Set the data on the processor, rerender
+    If block specified
+      Tell XMPP extension
+    If popover specified
+      Create popover if it hasn't been
+      Present the VCIndex in it (and set target on it)
+    Else if target specified
+      Run target via XMPP stream
+
+Type, sel, and menu are callbacks on ENTextView. To interacts with the UINavigationController. 
+
+View Controller
+---------------
+
+Most of these reference standard or 3rd party ViewController, but some provide entry points to standard views. 
+
+They're implementation considerations follow:
+
+- XML - interacts with the XML & XMPP engines, and outputs to UITableView. 
+- XMLgrid - interacts with the XML & XMPP engines, and outputs to AQGridView. 
+- contacts VCs - wraps AddressBookUI
+- photos - wraps UIPhotoPickerController
+- prompt - custom VC wrapping specified ones with a UITextView, UINavigationBar, UToolbar, & UISegmentedControl)
+- edit - wraps UITableView with internal form logic. 
+- web - wraps UIWebView
+
+XML Engine considerations
+=========================
+
+The XML engine needs to be fast on constantly updating XML, and so needs to:
+
+- Handle only what changes
+- be layered (XML, mode, UI)
