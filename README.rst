@@ -73,4 +73,4 @@ I plan to use in iWave:
 - RSully/RSColorPicker
 - enormego/EGOTextView
 - AlanQuartermain/AQGridView
-- Libstrophe ~~xmppframework (either that or custom)~~ (only allows for receiving basic stanzas)
+- Libstrophe --xmppframework (either that or custom)-- (only allows for receiving basic stanzas)
