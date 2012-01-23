@@ -8,6 +8,38 @@ This repository was created to plan the eventual creation of this project and so
 
 PyOfWave wants to encourage decentralization, so while we may create this project as a reference, we won't create any other clients ourselves but encourage others to do it.
 
+Planning allows me & others a feel for where we're headed, but requires leniency for change. 
+
+Getting Started
+---------------
+
+Initial work that requires doing is the artwork (I'll ask for a sea theme which fits well with Apple & Wave):
+
+- backdrops (should be unobtrusive, super realistic, & in iPad stylistics)
+
+  Specific desired backdrops:
+
+  - Linen (provided by iOS, default)
+  - waves (for theme & welcome stream)
+
+- alerts
+
+  - duplicate iOS alerts
+  - "surf" (default)
+
+- ringtones (waves can be set to use this instead)
+
+  - duplicate iOS ringtones
+  - "ocean waves" (default)
+
+- app icon
+- UIToolbar backdrops
+
+  Specifically:
+
+  - Pages-like "parchment" (for edit)
+  - Mediterranean wave pattern "waves" (for welcome)
+
 Overview
 --------
 
@@ -41,4 +73,4 @@ I plan to use in iWave:
 - RSully/RSColorPicker
 - enormego/EGOTextView
 - AlanQuartermain/AQGridView
-- xmppframework (either that or custom)
+- Libstrophe ~~xmppframework (either that or custom)~~ (only allows for receiving basic stanzas)
