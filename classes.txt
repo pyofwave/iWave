@@ -1,0 +1,103 @@
+Class Architecture
+++++++++++++++++++
+
+XMLTranslate:
+
+	- XMLTranslate :: NSObject
+
+	   -(void)registerHandler:(XMLPhrase)for:(NSString)level:(int)
+	   -(void)registerXML:level:
+	   -(NSArray)translateXMLNode:(NSXMLElement)
+
+	- XMLPhrase :: NSObject
+
+	   -(id)objectForXML:(NSXMLElement)
+	   -(void)children:(NSArray)changed
+
+	- XMLInterPhrase :: XMLPhrase
+
+		-(id)initWithXML:(NSXMLElement)
+
+	Control:
+
+		- XMLElOut :: XMLPhrase
+		- XMLElIf :: XMLPhrase
+		- XMLElImport :: XMLPhrase
+
+	Views:
+
+		- XMLElView :: XMLPhrase
+		- XMLElText :: XMLPhrase
+		- XMLElImage :: XMLPhrase
+		- XMLElDocument :: XMLPhrase
+		- XMLElSlider :: XMLPhrase
+		- XMLElButton :: XMLPhrase
+		- XMLElTitle :: XMLPhrase
+		- XMLElStepper :: XMLPhrase
+
+	Event:
+
+		- XMLEvt :: NSObject
+		- XMLTranslate+PopoverEvent
+		- XMLPopoverDelegate (Protocol)
+
+VCIndex:
+
+	- VCIndex :: NSObject
+
+	   +(VCEntry)VCFromCommand:(NSString)andAction:(block)
+
+	- VCEntry :: NSObject
+
+	   -(id)initWith:(NSString**)action:(block)
+	   -(UIViewController)ViewController
+	   -(NSString)command
+	   -(NSXMLElement)data
+	   -setData:(NSXMLElement)
+	   -requestData:(NSXMLElement)
+	   -action:(block)
+
+	XML:
+
+	   - VCXMLGrid :: VCEntry
+	   - VCXMLTableView :: VCEntry
+	   - VCXMLView :: VCEntry
+
+	System:
+
+	   - VCiABCard :: VCEntry
+	   - VCiABSelect :: VCEntry
+	   - VCiPhotos :: VCEntry
+	   - VCiWeb :: VCEntry
+
+	- VCPrompt :: VCEntry
+	- VCEdit :: VCEntry
+	- VCColorPicker :: VCEntry
+
+iWaveXMPP:
+
+	Planning still required
+
+	- XMPP :: NSObject (wraps libstrophe, with help from KissXML)
+	- XMPPElement :: NSXMLElement
+	- iWXMPPAlert :: NSObject
+
+	Elements:
+
+		- iWXMPPContact :: XMPPElement
+		- iWXMPPEvent :: XMPPElement
+
+Classes:
+
+	- iWaveApplicationDelegate <UIApplicationDelegate, XMLPopoverDelegate>
+
+  	Handles:
+
+		- URLs & options (which forwards to URLs)
+		- Defaults
+		- SplitView preparation & handling
+		- Saving and loading state
+
+	- iconURL :: NSUrlScheme
+
+In cases where A highlevel component needs to find a specific lowlevel subclass, global CFDictionary objects and `NSClassFromString` would be used.
