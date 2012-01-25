@@ -29,7 +29,10 @@ XMLTranslate:
 		- XMLElView :: XMLPhrase
 		- XMLElText :: XMLPhrase
 		- XMLElImage :: XMLPhrase
-		- XMLElDocument :: XMLPhrase
+                - XMLElDocument :: XMLPhrase
+
+                   (Presents VCiDocument & UIDocumentInteractionController with prepare gestures, icon, & for gadgets, images, & video, renders them)
+
 		- XMLElSlider :: XMLPhrase
 		- XMLElButton :: XMLPhrase
 		- XMLElTitle :: XMLPhrase
@@ -69,6 +72,7 @@ VCIndex:
 	   - VCiABSelect :: VCEntry
 	   - VCiPhotos :: VCEntry
 	   - VCiWeb :: VCEntry
+           - VCiDocument :: VCEntry
 
 	- VCPrompt :: VCEntry
 	- VCEdit :: VCEntry
@@ -86,6 +90,15 @@ iWaveXMPP:
 
 		- iWXMPPContact :: XMPPElement
 		- iWXMPPEvent :: XMPPElement
+
+Document:
+
+        - DocumentNavigationViewController :: UINavigationViewController
+
+           (Inserts gesture recognizers to navigate documents via swipe gesture recognizers with full UIDocumentInteractionController features)
+
+        - DocumentGadgetCell
+        - DocumentGadgetViewController
 
 Classes:
 
