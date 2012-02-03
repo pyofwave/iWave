@@ -74,3 +74,4 @@ I plan to use in iWave:
 - enormego/EGOTextView
 - AlanQuartermain/AQGridView
 - Libstrophe --xmppframework (either that or custom)-- (only allows for receiving basic stanzas)
+- Webkit/JavaScriptCore compilation by iOS Impact
